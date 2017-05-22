@@ -42,7 +42,7 @@
       <div id="content">
         {%- if page.parent %}
         <nav class="breadcrumbs">
-          <ol>
+          <ul>
             {%- if page.parent.parent.parent %}
             <li><a href="{{ prefix }}/{{ page.parent.parent.parent.get_path() }}">{{ page.parent.parent.parent.title }}</a></li>
             {%- endif %}
@@ -50,7 +50,7 @@
             <li><a href="{{ prefix }}/{{ page.parent.parent.get_path() }}">{{ page.parent.parent.title }}</a></li>
             {%- endif %}
             <li><a href="{{ prefix }}/{{ page.parent.get_path() }}">{{ page.parent.title }}</a></li>
-          </ol>
+          </ul>
         </nav>
         {%- endif %}
         {%- block main %}
@@ -76,22 +76,22 @@
             <li>
               <h{{ 1 + (child.level - page.level) }}><a href="{{ prefix }}/{{ child.get_path() }}/">{{ child.title }}</a></h{{ 1 + (child.level - page.level) }}>
               {%- if child.children %}
-                <ol>
+                <ul>
                 {%- for grandchild in child.children %}
                   <li><h{{ 1 + (grandchild.level - page.level) }}><a href="{{ prefix }}/{{ grandchild.get_path() }}/">{{ grandchild.title }}</a></h{{ 1 + (grandchild.level - page.level) }}>
                   </li>
                 {%- endfor %}
-                </ol>
+                </ul>
               {%- endif %}
             </li>
             {%- endfor %}
-          </ol>
+          </ul>
         {%- endif %}
         {%- endblock main %}
 
         {%- if page.prev or page.next %}
         <nav class="neighbors">
-          <ol>
+          <ul>
             {%- if page.prev %}
             <li><a href="{{ prefix }}/{{ page.prev.get_path() }}">
             <span class="neighbor-label">Previous</span>
@@ -104,7 +104,7 @@
             <span class="neighbor-title">{{ page.next.title }}</span>
             </a></li>
             {%- endif %}
-          </ol>
+          </ul>
         </nav>
         {%- endif %}
       </div>
