@@ -37,14 +37,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 { 
   font-weight: 900; 
-  color: #ff0000;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a { 
   color: inherit; 
 }
 h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited { color: inherit; 
 }
-
+h5 {
+  text-decoration-style: none;
+  font-weight: 400;
+}
 
 ul.footer-links {
   padding: 0; margin: 0;
@@ -110,7 +112,7 @@ main {
 }
 
 /* Media Queries */
-@media only screen  and (min-width : 1224px) {
+/*@media only screen  and (min-width : 1224px) {
   #site-navigation {
     left: 0;
     width: 25%;
@@ -118,7 +120,7 @@ main {
   .menu-active main {
     left: 25%;
   }
-}
+}*/
 
 @-ms-viewport{
   width: device-width;
